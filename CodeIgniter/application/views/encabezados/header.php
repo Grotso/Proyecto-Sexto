@@ -23,6 +23,8 @@
     <!-- Custom Fonts -->
     <link href="<?php echo base_url();?>font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
+    
+
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -150,14 +152,35 @@
                         <a href="<?php echo base_url();?>index.php/Portada"><i class="fa fa-fw fa-dashboard"></i> Portada</a>
                     </li>
                     <li>
-                        <a href="<?php echo base_url();?>index.php/Ultrasonido"><i class="fa fa-fw fa-bar-chart-o"></i> Gráficos</a>
+                        <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="fa fa-fw fa-bar-chart-o"></i> Gráficos <i class="fa fa-fw fa-caret-down"></i></a>
+                        <ul id="demo" class="collapse">
+                            <li>
+                                <a href="<?php echo base_url();?>index.php/Ultrasonido">Ultrasonido</a>
+                            </li>
+                            <li>
+                                <a href="<?php echo base_url();?>index.php/Infrarrojo">Infrarrojo</a>
+                            </li>
+                        </ul>
                     </li>
-                    <li>
-                        <a href="<?php echo base_url();?>index.php/Reportes/"><i class="fa fa-fw fa-table"></i> Reportes</a>
+		            <li>
+                        <a href="javascript:;" data-toggle="collapse" data-target="#demo1"><i class="fa fa-fw fa-edit"></i> Actuadores <i class="fa fa-fw fa-caret-down"></i></a>
+                        <ul id="demo1" class="collapse">
+                            <li>
+                                <a href="<?php echo base_url()?>index.php/Activadores">Pistón</a>
+                            </li>
+                        </ul>
+                    </li>   
+		            <li>
+                        <a href="javascript:;" data-toggle="collapse" data-target="#demo2"><i class="fa fa-fw fa-table"></i> Reportes <i class="fa fa-fw fa-caret-down"></i></a>
+                        <ul id="demo2" class="collapse">
+                            <li>
+                                <a href="<?php echo base_url();?>index.php/Reportes/tablaUltrasonido">Ultrasonido</a>
+				                <a href="<?php echo base_url();?>index.php/Reportes/tablaInfrarrojo"">Infrarrojo</a>
+                            </li>
+                        </ul>
                     </li>
-                    <li>
-                        <a href="<?php echo base_url()?>index.php/Activadores/"><i class="fa fa-fw fa-edit"></i> Activadores</a>
-                    </li>
+
+                     
                     <!--
                     <li>
                         <a href="bootstrap-elements.html"><i class="fa fa-fw fa-desktop"></i> Bootstrap Elements</a>

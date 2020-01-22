@@ -2,7 +2,7 @@
 
 defined('BASEPATH') OR exit ('No direct script access allowed');
 
-class BDDUltrasonido extends CI_Model{
+class Infrarrojo_model extends CI_Model{
 
     function __construct(){
 
@@ -12,15 +12,15 @@ class BDDUltrasonido extends CI_Model{
 
     function ultimosRegistros(){
 
-        $query = $this->db->query('SELECT * FROM ´sensor´ ORDER BY ´id´ DESC LIMIT 20');
-        return $query;
+        $consulta = $this->db->query('SELECT * FROM ´infrarrojo´ ORDER BY ´id´ DESC LIMIT 20');
+        return $consulta;
 
     }
 
     function verRegistros(){
 
-        $query = $this->db->query('SELECT * FROM sensor');
-        return $query;
+        $consulta = $this->db->query('SELECT * FROM infrarrojo');
+        return $consulta;
 
     }
 

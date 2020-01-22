@@ -7,13 +7,17 @@ class Ultrasonido extends CI_Controller{
         parent::__construct();
         //$this->load->helper('form'); //se encuentra en la carpeta system
         //$this->load->model('codigo_model'); //Se carga el archivo creado en model
-        $this->load->helper('url');
+        $this -> load -> model('ultrasonido_model');
+        $this -> load -> database();
+        $this -> load -> helper('url');
     }
 
     function index(){
         $this -> load -> view('encabezados/header.php');
-        $this -> load -> view('ultrasonido/Grafico.php');
+        $datos["reg"] = $this->ultrasonido_model->verRegistros();
+        $this -> load -> view('ultrasonido/Grafico_ultrasonido.php',$datos);
         $this -> load -> view('encabezados/footer.php');
+       
     }
 
     function grafico(){
@@ -29,4 +33,4 @@ class Ultrasonido extends CI_Controller{
 
 }
 
-?>
+?>;
